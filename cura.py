@@ -1,7 +1,6 @@
 import os
 import requests
 import streamlit as st
-from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 import sqlite3
 from dotenv import load_dotenv
@@ -19,11 +18,6 @@ os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 import google.generativeai as genai
 genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
 
 # consultation code
 
@@ -203,54 +197,6 @@ def main():
             <i>(Coming Soon)</i> Get directions, contact information, and reviews to make informed decisions about your healthcare.</p>
             </div>
             """, unsafe_allow_html=True)
-
-        
-        st.header("Engaging with Cura")
-
-        coll1, coll2 , coll3 = st.columns(3)
-
-        with coll1:
-            lottie_animation1 = load_lottieurl("https://lottie.host/88319248-8994-431c-a635-aaf2ab675ecd/NQ2nhrJO4e.json")  # Example URL, replace with actual URL
-            st_lottie(
-                lottie_animation1,
-                speed=1,
-                reverse=False,
-                loop=True,
-                quality="high",
-                height=300,
-                width=300,
-                key="lottie1",
-            )
-            st.write("**Real-time Interaction**: Our bot is ready to engage with you instantly.")
-
-        with coll2:
-            lottie_animation2 = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json") 
-            st_lottie(
-                lottie_animation2,
-                speed=1,
-                reverse=False,
-                loop=True,
-                quality="high",
-                height=300,
-                width=300,
-                key="lottie2",
-            )
-            st.write("**Streamlined Process**: Enjoy a smooth and user-friendly interface.")
-
-    
-        with coll3:
-            lottie_animation3 = load_lottieurl("https://lottie.host/f622ccc9-1e01-465f-9ced-3041b73149f7/ehYFeolVDq.json")  # Example URL, replace with actual URL
-            st_lottie(
-                lottie_animation3,
-                speed=1,
-                reverse=False,
-                loop=True,
-                quality="high",
-                height=300,
-                width=300,
-                key="lottie3",
-            )
-            st.write("**Efficient Health Management**: Manage your health records with ease.")
 
         st.write("")
         st.write("Ready to take control of your health? Get started by heading to the Consultation section and chatting with our bot now.")

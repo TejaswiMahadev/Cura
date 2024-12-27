@@ -11,7 +11,7 @@ from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain.chains.question_answering import load_qa_chain
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from dotenv import load_dotenv
 import google.generativeai as genai
 

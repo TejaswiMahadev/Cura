@@ -20,7 +20,7 @@ CURA is an AI-powered healthcare chatbot designed to assist users by providing p
 ## Installation & Setup ⚙️
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cura.git
+   git clone https://github.com/TejaswiMahadev/cura.git
    cd cura
    ```
 2. Install dependencies:

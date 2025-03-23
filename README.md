@@ -36,8 +36,8 @@ CURA is an AI-powered healthcare chatbot designed to assist users by providing p
 1. Open the application in a browser.
 2. Navigate to different sections via the sidebar.
 3. Input symptoms to get a diagnosis.
-4. View suggested medications, precautions, and recommended doctors.
-5. Use additional features like **Medical Record Reader** and **Find Nearest Doctors**.
+4. View suggested medications, precautions.
+5. Use additional features like **Medical Record Reader**.
 
 ## Future Enhancements 🔮
 - 🏥 Integration with EHR systems for personalized health insights.

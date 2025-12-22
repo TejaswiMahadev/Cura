@@ -32,7 +32,7 @@ def get_diagnosis_chain():
     Given the following symptoms: {symptoms}, provide a possible diagnosis and suggest prevention measures,
     and recommend possible cures and treatments and list any relevant medication that could help.Ensure the response is clear, concise, and considers all listed symptoms.
     """
-    model = ChatGoogleGenerativeAI(model="gemini-pro", client=genai, temperature=0.5)
+    model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", client=genai, temperature=0.5)
     prompt = PromptTemplate(template=prompt_template, input_variables=["symptoms"])
     chain = LLMChain(llm=model, prompt=prompt, output_key='diagnosis', memory=ConversationBufferMemory())
     return chain
@@ -408,3 +408,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
